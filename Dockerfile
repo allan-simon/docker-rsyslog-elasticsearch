@@ -1,5 +1,4 @@
-FROM      ubuntu:trusty
-
+FROM      ubuntu
 # Install rsyslog and rsyslog-elasticsearch extensions. All in one
 # go to reduce amount of layers.
 RUN       apt-get -y update && \
