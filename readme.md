@@ -10,6 +10,8 @@ Environment var | Description
 -------------|---------------
 ESLOG\_HOST | The endpoint where the ElasticSearch instance is hosted.
 ESLOG\_ES\_PORT | The port number where the ElasticSearch hosts the API on.
+ESLOG\_ES\_USE\_HTTPS | `on` or `off` if your ElasticSearch will be accessed through HTTPS
+
 
 ##Example usage
 
