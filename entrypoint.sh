@@ -19,6 +19,9 @@ if [ -n "$ESLOG_HOST" ]; then
 	if [ -n "$ESLOG_ES_PORT" ]; then
 		sed s/9200/$ESLOG_ES_PORT/g -i /etc/rsyslog.d/rsyslog_elasticsearch.conf
 	fi
+	if [ -n "$ESLOG_ES_USE_HTTPS" ]; then
+		sed s/usehttps=\"on\"/$ESLOG_ES_USE_HTTPS/g -i /etc/rsyslog.d/rsyslog_elasticsearch.conf
+	fi
 fi
 
 /usr/sbin/rsyslogd $@
