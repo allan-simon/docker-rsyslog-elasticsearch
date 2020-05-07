@@ -10,7 +10,8 @@ RUN       apt-get -y update && \
           apt-get -q -y --no-install-recommends install \
           rsyslog rsyslog-elasticsearch && \
           apt-get clean && \
-          rm -rf /var/lib/apt/lists/*
+          rm -rf /var/lib/apt/lists/* && \
+          chown syslog /var/log
 
 COPY      entrypoint.sh                  /
 COPY	  rsyslog.conf                   /etc/
