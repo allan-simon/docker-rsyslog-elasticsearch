@@ -5,7 +5,6 @@ RUN       apt-get -y update && \
           apt-get upgrade -y --no-install-recommends && \
           apt-get install -y --no-install-recommends \
           software-properties-common && \
-          add-apt-repository ppa:adiscon/v8-stable && \
           apt-get -y update && \
           apt-get -q -y --no-install-recommends install \
           rsyslog rsyslog-elasticsearch && \
