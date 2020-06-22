@@ -7,7 +7,7 @@ RUN       apt-get -y update && \
           software-properties-common && \
           apt-get -y update && \
           apt-get -q -y --no-install-recommends install \
-          rsyslog rsyslog-elasticsearch && \
+          rsyslog rsyslog-elasticsearch cron logrotate && \
           apt-get clean && \
           rm -rf /var/lib/apt/lists/* && \
           chown syslog /var/log
