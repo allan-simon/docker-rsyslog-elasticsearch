@@ -15,6 +15,7 @@ RUN       apt-get -y update && \
 COPY      entrypoint.sh                  /
 COPY	  rsyslog.conf                   /etc/
 COPY      rsyslog_elasticsearch.conf     /etc/rsyslog.d/
+COPY      rsyslog-rotate                 /usr/lib/rsyslog/rsyslog-rotate
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["-n"]

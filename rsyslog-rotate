@@ -1,0 +1,8 @@
+#!/bin/bash
+# This script is run by logrotate just after rotating (see /etc/logrotate/rsyslogd)
+# It serves to tell rsyslogd to rotate its file descriptors (by sending the HUP signal)
+
+# We need it to overwrite the official script which needs Upstart or SystemD
+
+rsyslogd_pid=$(cat /var/run/rsyslogd.pid)
+kill -HUP $rsyslogd_pid
