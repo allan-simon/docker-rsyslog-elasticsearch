@@ -30,3 +30,13 @@ On a docker 1.8 machine (which supports tagging):
 	docker run -d --log-driver=syslog --log-opt syslog-address=tcp://{hostip}:5514 --log-opt syslog-tag="redis" redis
 
 	
+
+## Testing
+
+You can send some test logs to test that everything is working by
+Docker exec'ing and sending a few messages with the:
+
+    seq 10 | xargs logger -P 514 -n localhost hello message:
+
+.. and then checking the logs and the Elasticsearch indices
+to see if everything is working.
